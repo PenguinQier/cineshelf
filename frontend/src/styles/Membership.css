@@ -1,0 +1,318 @@
+.membership-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.membership-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.membership-header h1 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+.vip-status {
+  display: inline-block;
+  padding: 8px 15px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #7f8c8d;
+  background-color: #f5f5f5;
+}
+
+.vip-status.active {
+  color: #fff;
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  box-shadow: 0 3px 10px rgba(231, 76, 60, 0.3);
+}
+
+.vip-status i {
+  color: #FFD700;
+  margin-right: 5px;
+}
+
+.error-message {
+  padding: 15px;
+  background-color: #fdecea;
+  color: #e74c3c;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border-left: 4px solid #e74c3c;
+  font-weight: 500;
+}
+
+.success-message {
+  padding: 15px;
+  background-color: #eafaf1;
+  color: #27ae60;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border-left: 4px solid #27ae60;
+  font-weight: 500;
+}
+
+.vip-benefits {
+  margin-bottom: 40px;
+}
+
+.vip-benefits h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.vip-benefits h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #e74c3c, #c0392b);
+  border-radius: 3px;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+}
+
+.benefit-item i {
+  font-size: 24px;
+  margin-right: 15px;
+  color: #e74c3c;
+  background: rgba(231, 76, 60, 0.1);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.benefit-info h3 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.benefit-info p {
+  margin: 0;
+  color: #7f8c8d;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.vip-plans {
+  margin-bottom: 40px;
+}
+
+.vip-plans h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.vip-plans h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #e74c3c, #c0392b);
+  border-radius: 3px;
+}
+
+.plans-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.plan-card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  border: 1px solid #eee;
+  background-color: white;
+}
+
+.plan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.plan-card.recommended {
+  border: 2px solid #e74c3c;
+  transform: scale(1.05);
+}
+
+.plan-card.recommended:hover {
+  transform: scale(1.05) translateY(-5px);
+}
+
+.plan-tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: white;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.plan-header {
+  background-color: #f8f9fa;
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.plan-price {
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 36px;
+  font-weight: 700;
+  color: #e74c3c;
+}
+
+.plan-price span {
+  font-size: 16px;
+  font-weight: 400;
+  color: #7f8c8d;
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0 20px 20px;
+  margin: 0;
+}
+
+.plan-features li {
+  padding: 10px 0;
+  text-align: center;
+  color: #7f8c8d;
+  border-top: 1px solid #eee;
+}
+
+.vip-action {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.vip-button {
+  padding: 12px 40px;
+  border-radius: 30px;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.vip-button.activate {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: white;
+}
+
+.vip-button.activate:hover {
+  background: linear-gradient(135deg, #c0392b, #a93226);
+  box-shadow: 0 7px 20px rgba(231, 76, 60, 0.3);
+  transform: translateY(-2px);
+}
+
+.vip-button.cancel {
+  background: #f5f5f5;
+  color: #7f8c8d;
+  border: 1px solid #ddd;
+}
+
+.vip-button.cancel:hover {
+  background: #ebebeb;
+  color: #2c3e50;
+}
+
+.vip-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.vip-disclaimer {
+  margin-top: 15px;
+  color: #7f8c8d;
+  font-size: 14px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .membership-container {
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+  }
+
+  .benefits-list {
+    grid-template-columns: 1fr;
+  }
+
+  .plans-container {
+    grid-template-columns: 1fr;
+  }
+
+  .plan-card.recommended {
+    transform: none;
+  }
+
+  .plan-card.recommended:hover {
+    transform: translateY(-5px);
+  }
+}

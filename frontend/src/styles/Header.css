@@ -1,0 +1,522 @@
+.moviehub-header {
+  background-color: rgba(44, 62, 80, 0.98);
+  color: white;
+  padding: 1.2rem 0;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.12);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.moviehub-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #3498db, #2980b9, #1abc9c);
+  opacity: 0.8;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.logo {
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #fff;
+  background: linear-gradient(to right, #fff, #3498db, #2ecc71);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -1px;
+  position: relative;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 40px rgba(52, 152, 219, 0.3);
+}
+
+.logo:hover {
+  text-shadow: 0 0 15px rgba(52, 152, 219, 0.8);
+  transform: scale(1.05);
+}
+
+.logo a {
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(to right, #fff, #3498db, #2ecc71);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.logo a:hover {
+  text-shadow: 0 0 15px rgba(52, 152, 219, 0.8);
+}
+
+.main-nav {
+  display: flex;
+  gap: 2.2rem;
+}
+
+.nav-link {
+  color: rgba(236, 240, 241, 0.85);
+  font-weight: 500;
+  padding: 0.6rem 0;
+  position: relative;
+  text-decoration: none;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+  letter-spacing: 0.4px;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+  border-radius: 2px;
+}
+
+.nav-link:hover::before,
+.nav-link.active::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.nav-link:hover {
+  color: #fff;
+  transform: translateY(-3px);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+.nav-link.active {
+  color: #3498db;
+  font-weight: 600;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.header-info {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.info-label {
+  color: #bdc3c7;
+  font-size: 0.9rem;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: rgba(52, 73, 94, 0.5);
+  border-radius: 50px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+.search-box:hover,
+.search-box:focus-within {
+  background-color: rgba(52, 73, 94, 0.7);
+  border-color: rgba(52, 152, 219, 0.5);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15), 0 0 10px rgba(52, 152, 219, 0.2);
+  transform: translateY(-2px);
+}
+
+.search-input {
+  padding: 0.7rem 1.3rem;
+  border: none;
+  background-color: transparent;
+  color: white;
+  outline: none;
+  width: 200px;
+  font-size: 0.95rem;
+  transition: width 0.3s ease;
+}
+
+.search-input:focus {
+  width: 250px;
+}
+
+.search-input::placeholder {
+  color: rgba(189, 195, 199, 0.7);
+}
+
+.search-button {
+  background: linear-gradient(to right, #3498db, #2980b9);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.search-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: all 0.5s ease;
+}
+
+.search-button:hover::before {
+  left: 100%;
+}
+
+.search-button:hover {
+  background: linear-gradient(to right, #2980b9, #1f6da8);
+  box-shadow: 0 4px 10px rgba(41, 128, 185, 0.3);
+}
+
+/* 用户菜单和认证相关样式 */
+.auth-nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.auth-link {
+  color: rgba(236, 240, 241, 0.85);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 15px;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.auth-link:hover {
+  color: #3498db;
+  background-color: rgba(255, 255, 255, 0.05);
+  transform: translateY(-2px);
+}
+
+.auth-button {
+  padding: 9px 20px;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 4px 10px rgba(52, 152, 219, 0.2);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.auth-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #2980b9, #2c3e50);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.auth-button:hover::before {
+  opacity: 1;
+}
+
+.auth-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(52, 152, 219, 0.3);
+  color: white;
+}
+
+.user-menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.user-avatar {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #3498db;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.vip-indicator {
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: #FFD700;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.vip-tag {
+  margin-left: 5px;
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.user-avatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.user-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-avatar .default-avatar {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.user-dropdown {
+  position: absolute;
+  top: 55px;
+  right: 0;
+  width: 190px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  overflow: hidden;
+  border: 1px solid rgba(52, 152, 219, 0.1);
+}
+
+.user-menu:hover .user-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-item {
+  display: block;
+  padding: 12px 20px;
+  color: #2c3e50;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  text-align: left;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.dropdown-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background: linear-gradient(to bottom, #3498db, #2ecc71);
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+  color: #3498db;
+  padding-left: 25px;
+}
+
+.dropdown-item:hover::before {
+  transform: scaleY(1);
+}
+
+.logout-item {
+  border-top: 1px solid #f1f1f1;
+  color: #e74c3c;
+  margin-top: 5px;
+}
+
+.logout-item:hover {
+  color: #c0392b;
+  background-color: #fef5f5;
+}
+
+.logout-item:hover::before {
+  background: linear-gradient(to bottom, #e74c3c, #c0392b);
+}
+
+.admin-indicator {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.user-role {
+  padding: 12px 20px 5px;
+  border-bottom: 1px solid #f1f1f1;
+  text-align: center;
+}
+
+.role-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.admin-tag {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+}
+
+.user-tag {
+  background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .header-left {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .main-nav {
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .header-right {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .search-input:focus {
+    width: 100%;
+  }
+
+  .auth-nav {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .user-dropdown {
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+  }
+
+  .user-menu:hover .user-dropdown {
+    transform: translateX(-50%) translateY(0);
+  }
+}

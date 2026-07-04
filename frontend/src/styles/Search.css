@@ -1,0 +1,185 @@
+.search-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.search-box {
+  display: flex;
+  width: 100%;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 25px 0 0 25px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.search-button {
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0 25px 25px 0;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-button:hover {
+  background: #0056b3;
+}
+
+.search-history-dropdown {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  background: #f8f9fa;
+  border: 2px solid #000000;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.search-history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  border-bottom: 2px solid #007bff;
+  font-weight: bold;
+  color: #333;
+  background-color: #e9ecef;
+}
+
+.clear-history-btn {
+  background: none;
+  border: none;
+  color: #dc3545;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 2px 8px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.clear-history-btn:hover {
+  background-color: #ffebee;
+  text-decoration: underline;
+}
+
+.search-history-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.search-history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  cursor: pointer;
+  transition: background 0.2s;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.search-history-item:hover {
+  background: #e9f5ff;
+}
+
+.search-history-item:last-child {
+  border-bottom: none;
+}
+
+.history-item-content {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.history-item-content i {
+  margin-right: 10px;
+  color: #007bff;
+  font-size: 16px;
+}
+
+.history-term {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #212529;
+  font-size: 15px;
+}
+
+.history-timestamp {
+  font-size: 13px;
+  color: #6c757d;
+  margin-left: 10px;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.highlight {
+  background-color: rgba(255, 213, 0, 0.4);
+  font-weight: bold;
+  color: #000;
+}
+
+.no-results-message {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  margin-top: 5px;
+  padding: 15px;
+  background: #fff8e1;
+  border: 1px solid #ffe082;
+  border-radius: 8px;
+  color: #ff8f00;
+  font-size: 14px;
+  text-align: center;
+  z-index: 990;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 添加搜索动画 */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.search-input:focus + .search-button {
+  animation: pulse 1s infinite;
+}
+
+/* 响应式设计 */
+@media (max-width: 576px) {
+  .search-container {
+    max-width: 100%;
+  }
+
+  .search-input, .search-button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .search-history-item {
+    padding: 10px 12px;
+  }
+}

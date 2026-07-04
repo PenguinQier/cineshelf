@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="450" viewBox="0 0 300 450">
+  <!-- 背景 -->
+  <rect width="300" height="450" fill="#f3f4f6" />
+
+  <!-- 电影图标 -->
+  <g transform="translate(150, 170)">
+    <path d="M-55,-40 H55 V40 H-55 V-40 Z" fill="#e2e5e9" stroke="#d1d5db" stroke-width="2" />
+    <circle cx="-35" cy="-20" r="8" fill="#d1d5db" />
+    <circle cx="35" cy="-20" r="8" fill="#d1d5db" />
+    <circle cx="-35" cy="20" r="8" fill="#d1d5db" />
+    <circle cx="35" cy="20" r="8" fill="#d1d5db" />
+  </g>
+
+  <!-- 文字 -->
+  <text x="150" y="250" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#64748b">暂无海报</text>
+  <text x="150" y="280" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#94a3b8">No Poster Available</text>
+</svg>

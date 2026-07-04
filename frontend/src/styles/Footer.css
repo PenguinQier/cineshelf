@@ -1,0 +1,180 @@
+.moviehub-footer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 60px 0 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.moviehub-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db, #2980b9, #1abc9c);
+  opacity: 0.8;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  padding: 0 30px;
+  position: relative;
+}
+
+.footer-section {
+  margin-bottom: 25px;
+  transition: all 0.3s ease;
+}
+
+.footer-section:hover {
+  transform: translateY(-5px);
+}
+
+.footer-title {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.footer-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #3498db, #2980b9);
+  border-radius: 2px;
+}
+
+.footer-text {
+  line-height: 1.8;
+  color: #bdc3c7;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 0;
+  transition: all 0.3s ease;
+}
+
+.footer-links li:hover {
+  padding-left: 8px;
+}
+
+.footer-links a {
+  color: #bdc3c7;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.footer-links a::before {
+  content: '›';
+  margin-right: 10px;
+  color: #3498db;
+  font-size: 1.3rem;
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #3498db;
+}
+
+.footer-links li:hover a::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-info li {
+  margin-bottom: 15px;
+  color: #bdc3c7;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-info li:hover {
+  color: #fff;
+  transform: translateX(5px);
+}
+
+.contact-info li::before {
+  content: '•';
+  color: #3498db;
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 30px;
+  margin-top: 30px;
+  border-top: 1px solid rgba(52, 73, 94, 0.8);
+  color: #95a5a6;
+  font-size: 0.95rem;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .moviehub-footer {
+    padding: 40px 0 20px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0 20px;
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+
+  .footer-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footer-links li,
+  .contact-info li {
+    justify-content: center;
+  }
+
+  .footer-links a::before {
+    display: none;
+  }
+}

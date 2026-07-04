@@ -1,0 +1,221 @@
+.upload-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 35px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.upload-container h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #2c3e50;
+  text-align: center;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.upload-container h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #3498db, #2980b9);
+  border-radius: 3px;
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.form-group:hover {
+  transform: translateY(-2px);
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.form-group label::before {
+  content: "•";
+  margin-right: 8px;
+  color: #3498db;
+  font-size: 20px;
+}
+
+/* 复选框组样式 */
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox-group label::before {
+  content: none; /* 去掉默认的点标记 */
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  cursor: pointer;
+  accent-color: #3498db;
+}
+
+.form-group input,
+.form-group select {
+  padding: 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+  outline: none;
+  background-color: white;
+}
+
+.form-group input[type="file"] {
+  padding: 12px;
+  background-color: #f5f7fa;
+  position: relative;
+  cursor: pointer;
+}
+
+.form-group input[type="file"]::-webkit-file-upload-button {
+  visibility: hidden;
+  width: 0;
+}
+
+.form-group input[type="file"]::before {
+  content: '选择文件';
+  display: inline-block;
+  background: linear-gradient(to right, #3498db, #2980b9);
+  color: white;
+  border-radius: 6px;
+  padding: 8px 12px;
+  outline: none;
+  white-space: nowrap;
+  user-select: none;
+  cursor: pointer;
+  font-weight: 500;
+  margin-right: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.error-message {
+  color: #e74c3c;
+  padding: 15px;
+  background-color: #fdecea;
+  border-radius: 8px;
+  font-weight: 500;
+  border-left: 4px solid #e74c3c;
+  margin-bottom: 10px;
+}
+
+.submit-btn {
+  padding: 16px;
+  background: linear-gradient(to right, #3498db, #2980b9);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(to right, #2980b9, #1f6da8);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(52, 152, 219, 0.4);
+}
+
+.submit-btn:disabled {
+  background: linear-gradient(to right, #95a5a6, #7f8c8d);
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.file-hint {
+  color: #7f8c8d;
+  font-size: 14px;
+  margin-top: 8px;
+  font-style: italic;
+}
+
+.video-preview {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f5f7fa;
+  border-radius: 8px;
+  border: 1px dashed #3498db;
+  transition: all 0.3s ease;
+}
+
+.video-preview:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.video-preview p {
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.video-preview video {
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  background-color: #000;
+  width: 100%;
+  max-height: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .upload-container {
+    padding: 25px 20px;
+    margin: 20px 15px;
+  }
+
+  .upload-container h2 {
+    font-size: 24px;
+  }
+
+  .form-group label {
+    font-size: 15px;
+  }
+
+  .submit-btn {
+    padding: 14px;
+    font-size: 16px;
+  }
+}
